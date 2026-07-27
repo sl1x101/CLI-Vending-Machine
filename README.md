@@ -1,3 +1,3 @@
-# Water-Vending-Machine-beginner
+# CLI-Vending-Machine-beginner
 - สร้างตู้กดน่้ำลองดู โดยค่อยๆสร้างอยากใส่อะไรก็ค่อยเพิ่ม 
 
