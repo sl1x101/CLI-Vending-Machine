@@ -9,7 +9,7 @@ water_price = {
     "5":("Coffee",25)
 }
 
-money = 10
+money = 0
 
 def show_menu ():
 
@@ -49,13 +49,31 @@ def buy_water():
         print("Invalid selection. ")
 
 
-def return_chang ():
+def return_money ():
     print(f"Returned {money} Baht")
     money = 0
 
 def main ():
-    show_menu()
-    
+    while True:
+        show_menu()
+        
+        try:
+            choice = int(input("choice: "))
+        except ValueError:
+            print("input number....")
+            continue
+
+        if choice  == 4:
+            print("Exit choice...")
+            break
+        elif choice  == 1 :
+            insert_money()
+        elif choice == 2 :
+            buy_water()
+        elif choice == 3 :
+            return_money()
+        else:
+            print("ไม่มีอันไหนตรงเงื่อนไข")
 
 
 
