@@ -32,7 +32,6 @@ def buy_water():
     for key,value in water_price.items():
         print(f"{key}. {value[0]} - {value[1]} Baht")
 
-
     item = input("choose: ")
 
     if item in water_price:
@@ -40,7 +39,6 @@ def buy_water():
 
         if money >= price:
             money-= price
-
             print(f"\nDispensing {name}...")
             print("Enjoy your water! ") 
             print(f"Remaining balance: {money} Bath")
@@ -50,11 +48,14 @@ def buy_water():
     else:
         print("Invalid selection. ")
 
-        
+
+def return_chang ():
+    print(f"Returned {money} Baht")
+    money = 0
+
 def main ():
     show_menu()
-
-
+    
 
 
 
