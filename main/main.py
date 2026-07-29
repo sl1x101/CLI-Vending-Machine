@@ -25,15 +25,17 @@ def insert_money ():
     amount  = int(input("Insert Money: "))
     money += amount
     print(f"current balance : {money} Baht")
+
+def water_menu():
+    #loop show water
+    for key,value in water_price.items():
+        print(f"{key}. {value[0]} - {value[1]} Baht")
     
 def buy_water():
     global money
     print("\n Available Water")
-
-    #loop show water
-    for key,value in water_price.items():
-        print(f"{key}. {value[0]} - {value[1]} Baht")
-
+    water_menu()
+    
     item = input("choose: ")
 
     if item in water_price:
@@ -77,7 +79,6 @@ def main ():
             return_money()
         else:
             print("ไม่มีอันไหนตรงเงื่อนไข")
-
 
 
 if __name__ == "__main__":
