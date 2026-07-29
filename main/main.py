@@ -26,22 +26,27 @@ def insert_money ():
     money += amount
     print(f"current balance : {money} Baht")
 
+def has_enough_money(price):
+    global money
+    return money >= price
+
 def water_menu():
     #loop show water
     for key,value in water_price.items():
         print(f"{key}. {value[0]} - {value[1]} Baht")
+
     
 def buy_water():
     global money
     print("\n Available Water")
     water_menu()
-    
+
     item = input("choose: ")
 
     if item in water_price:
         name , price = water_price[item]
 
-        if money >= price:
+        if has_enough_money(price):
             money-= price
             print(f"\nDispensing {name}...")
             print("Enjoy your water! ") 
