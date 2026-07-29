@@ -21,11 +21,13 @@ def show_menu ():
     print("="*30)
     
 def insert_money ():
+    global money
     amount  = int(input("Insert Money: "))
     money += amount
     print(f"current balance : {money} Baht")
     
 def buy_water():
+    global money
     print("\n Available Water")
 
     #loop show water
@@ -50,6 +52,7 @@ def buy_water():
 
 
 def return_money ():
+    global money
     print(f"Returned {money} Baht")
     money = 0
 
